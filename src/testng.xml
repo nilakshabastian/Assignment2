@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="FluentWait TestSuite" verbose="1" >
+    <test name="Regression Test One"   >
+        <packages>
+            <package name="org.example.Tests"  />
+        </packages>
+    </test>
+</suite>

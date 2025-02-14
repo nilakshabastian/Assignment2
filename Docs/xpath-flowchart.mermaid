@@ -1,0 +1,19 @@
+flowchart TD
+    A[Start Element Selection] --> B{Element has ID?}
+    B -->|Yes| C[Use ID selector]
+    B -->|No| D{Has unique attribute?}
+    D -->|Yes| E[Use attribute selector]
+    D -->|No| F{Is in form?}
+    F -->|Yes| G[Use form context]
+    F -->|No| H{Has unique text?}
+    H -->|Yes| I[Use text selector]
+    H -->|No| J[Use relationship selector]
+    C --> K[Validate Selection]
+    E --> K
+    G --> K
+    I --> K
+    J --> K
+    K --> L{Multiple elements?}
+    L -->|Yes| M[Refine selector]
+    L -->|No| N[Element Found]
+    M --> B
